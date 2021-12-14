@@ -50,6 +50,7 @@
 .function {
     font-size: 18px;
     color: #ABABAB;
+    margin-bottom: 213px;
     &__title {
         text-align: center;
         @extend %Jost-500;
@@ -73,6 +74,7 @@
             display: flex;
             margin-top: -60px;
             transition: all 0.5s;
+            color: #B0B0B0;
             &:hover {
                 transform: scale(110%);
             }
@@ -120,6 +122,170 @@
             height: 605px;
             text-align: left;
             margin-right: -30px;
+        }
+    }
+}
+
+// ----------------------------------------------------
+.footer {
+    background-image: url(../images/footer-bcg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 522px;
+    color: #fff;
+    &-top {
+        margin-top: 184px;
+        display: flex;
+        &__box {
+            max-width: 518px;
+            &+.footer-top__box {
+                margin-left: 237px;
+            }
+        }
+        &__title {
+            @extend %Jost-700;
+            font-size: 28px;
+            line-height: 124%;
+            margin-bottom: 13px;
+        }
+        &__text {
+            width: 100%;
+        }
+        &__contacts-items {
+            margin-bottom: 15px;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 0%;
+                right: 0;
+                bottom: -5px;
+                height: 2px;
+                background-color: #fff;
+                transition: ease-out 0.5s;
+            }
+            &:hover::before {
+                width: 100%;
+            }
+        }
+        &__social-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        &__social-item {
+            cursor: pointer;
+            transition: all 0.9s;
+            margin-bottom: 15px;
+            &:hover {
+                transform: rotate(360deg) scale(130%);
+            }
+        }
+        &__social-item {
+            margin-right: 36px;
+        }
+        &__social-item:last-child {
+            margin-right: 0;
+        }
+    }
+    &-copyright {
+        margin-top: 67px;
+        border-top: 1px solid #fff;
+        text-align: center;
+        padding: 48px 0 0;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+}
+
+// ----------------------------------------------------
+@media (max-width: 1000px) {
+    .header {
+        text-align: center;
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__info {
+            margin-top: 0;
+            margin-bottom: 35px;
+        }
+        &-btn__box {
+            justify-content: center;
+        }
+        &-img {
+            max-width: 70%;
+            &__box {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .burger-menu {
+        display: block;
+        width: 35px;
+        height: 35px;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .user-nav {
+        position: absolute;
+        transform: translatex(-1500px);
+        transition: .53s ease-in-out;
+        svg {
+            width: 45px;
+            height: 45px;
+        }
+        &__item {
+            padding: 15px;
+            text-align: center;
+            color: #000;
+            border-bottom: 2px solid #8253D8;
+        }
+        &__list {
+            display: block;
+        }
+        &--active {
+            transition: all 0.5s;
+            transform: translateX(-10px);
+            top: 100px;
+            width: 100%;
+            background-color: rgba($color: #fff, $alpha: 0.9);
+        }
+    }
+    .user-nav__item+.user-nav__item {
+        margin-left: 0;
+    }
+    .burger-menu path {
+        fill: white;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        background-position: top;
+        background-size: inherit;
+        &__title {
+            font-size: 30px;
+        }
+        &-btn__box {
+            flex-wrap: wrap;
+        }
+        &__btn {
+            margin: 0 15px 15px;
+        }
+        &__text {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    .header {
+        &__title {
+            font-size: 25px;
         }
     }
 }
