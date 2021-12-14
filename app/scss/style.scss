@@ -2,3 +2,45 @@
 @import "vars";
 @import "global";
 // ----------------------------------------------------
+.header {
+    background-image: url(../images/header-bcg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    &__inner {
+        min-height: 100vh;
+    }
+    &-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 55px;
+    }
+    &__content {
+        margin-top: 66px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__info {
+        max-width: 559px;
+        margin-top: -182px;
+    }
+    &__title {
+        @extend %Jost-700;
+        font-size: 48px;
+        margin-bottom: 14px;
+        line-height: 124%;
+    }
+    &__text {
+        font-size: 20px;
+        margin-bottom: 44px;
+    }
+    &-btn__box {
+        display: flex;
+    }
+    &__btn+.header__btn {
+        margin-left: 21px;
+    }
+}
