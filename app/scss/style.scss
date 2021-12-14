@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: #fff;
+    margin-bottom: 66px;
     &__inner {
         min-height: 100vh;
     }
@@ -42,5 +43,83 @@
     }
     &__btn+.header__btn {
         margin-left: 21px;
+    }
+}
+
+// ----------------------------------------------------
+.function {
+    font-size: 18px;
+    color: #ABABAB;
+    &__title {
+        text-align: center;
+        @extend %Jost-500;
+        font-size: 49px;
+        line-height: 124%;
+        color: #000;
+        margin-bottom: 24px;
+        text-transform: uppercase;
+        &-small {
+            color: #000;
+            @extend %Jost-500;
+            font-size: 22px;
+            margin-bottom: 11px;
+        }
+    }
+    &__descr {
+        max-width: 363px;
+        margin: 0 auto 101px;
+        text-align: center;
+        &-box {
+            display: flex;
+            margin-top: -60px;
+            transition: all 0.5s;
+            &:hover {
+                transform: scale(110%);
+            }
+        }
+        &-img {
+            &__box {
+                border-radius: 50%;
+                background: linear-gradient(180deg, #8253D8 0%, #D05DDE 100%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90px;
+                height: 90px;
+            }
+        }
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        &-box {
+            max-width: 321px;
+            width: 100%;
+            &-left {
+                margin-right: 26px;
+            }
+            &-right {
+                margin-left: 26px;
+            }
+        }
+        &-left {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 605px;
+            text-align: right;
+            margin-left: -30px;
+        }
+        &-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 605px;
+            text-align: left;
+            margin-right: -30px;
+        }
     }
 }

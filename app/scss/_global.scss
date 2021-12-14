@@ -77,6 +77,8 @@ main {
     align-items: center;
     line-height: 39px;
     transition: all 0.5s;
+    @extend %Jost-700;
+    font-size: 17px;
     &:hover {
         transform: translate(10px, 10px);
     }
